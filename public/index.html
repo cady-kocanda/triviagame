@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trivia Game (Demo)</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; padding: 20px; }
+    #lobby, #game { max-width: 720px; margin: 0 auto; }
+    .hidden { display: none; }
+    .choice { margin: 8px 0; }
+    button { padding: 8px 12px; }
+    #scoreboard { margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <div id="lobby">
+    <h1>Trivia Game (Demo)</h1>
+    <div id="create">
+      <input id="hostName" placeholder="Your name" />
+      <button id="createRoom">Create Room</button>
+    </div>
+    <hr />
+    <div id="join">
+      <input id="playerName" placeholder="Your name" />
+      <input id="roomId" placeholder="Room ID" />
+      <button id="joinRoom">Join Room</button>
+    </div>
+    <div id="roomInfo" class="hidden">
+      <p>Room: <span id="myRoomId"></span></p>
+      <p>Players:</p>
+      <ul id="playersList"></ul>
+      <button id="startGame">Start Game (Host only)</button>
+      <p id="linkArea"></p>
+    </div>
+  </div>
+
+  <div id="game" class="hidden">
+    <h2 id="qtitle"></h2>
+    <div id="choices"></div>
+    <p id="timer"></p>
+    <div id="status"></div>
+    <div id="scoreboard"></div>
+    <div id="gameOverActions" class="hidden">
+      <button id="backHome">Back to Home</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

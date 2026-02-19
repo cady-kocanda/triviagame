@@ -1,4 +1,7 @@
-# Trivia Game (Demo)
+# Trivia Game
+
+<img width="929" height="514" alt="Screenshot 2026-02-18 at 7 15 03 PM" src="https://github.com/user-attachments/assets/c06d7e26-78f4-41ad-8f71-3e19c7699e91" />
+
 
 This is a minimal multiplayer trivia demo using Node/Express and Socket.io.
 
